@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for infobanrep module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+function infobanrep_theme($existing, $type, $theme, $path) {
+    return [
+      'infobanrep_block' => [
+        'variables' => [
+          'data' => [],
+        ],
+      ],
+    ];
+  }

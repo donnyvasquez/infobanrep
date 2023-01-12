@@ -1,0 +1,6 @@
+name: infobanrep
+type: module
+description: Informacion financiera BanRep
+package: BanRep
+core: 8.x
+core_version_requirement: ^8 || ^9

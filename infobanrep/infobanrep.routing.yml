@@ -1,0 +1,15 @@
+infobanrep.example:
+  path: '/infobanrep/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\infobanrep\Controller\InfobanrepController::build'
+  requirements:
+    _permission: 'access content'
+
+infobanrep.settings_form:
+  path: '/admin/config/system/infobanrep'
+  defaults:
+    _title: 'infobanrep settings'
+    _form: 'Drupal\infobanrep\Form\SettingsForm'
+  requirements:
+    _permission: 'administer infobanrep configuration'

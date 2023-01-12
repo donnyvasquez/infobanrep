@@ -1,0 +1,6 @@
+infobanrep.settings_form:
+  title: infobanrep
+  description: Configure infobanrep.
+  parent: system.admin_config_system
+  route_name: infobanrep.settings_form
+  weight: 10

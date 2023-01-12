@@ -1,0 +1,46 @@
+{{ attach_library('infobanrep/infobanrep') }}
+{% if data is defined  %}
+<section class="infobanrep-finance--block">
+  <div class="finance-meta">
+    <h3 class="finance-meta--descripcion">{{ data["Meta"].DESCRIPCION|raw }}</h3>
+    <div class="finance-meta--indicador"> {{ data["Meta"].INDICADOR}}</div>
+    <a href="#" class="button" id="meta-button">Conozca más</a>
+  </div>
+
+  <div class="finance-inflacion">
+    <h3 class="finance-inflacion--descripcion">{{ data["Inflacion"].DESCRIPCION|raw }}</h3>
+    <div class="finance-inflacion--indicador">{{ data["Inflacion"].INDICADOR}}</div>
+    <div>{{ data["Inflacion"].FECHA}}</div>
+    <a href="#" class="button" id="meta-button">Otras medidas</a>
+  </div>
+
+  <div class="finance-tibr">
+    <h3 class="finance-tibr--descripcion">{{ data["TIBR"].DESCRIPCION|raw }}</h3>
+    <div>Próxima decisión {{ data["TIBR"].FECHA}}</div>
+    <div class="finance-tibr--indicador">{{ data["TIBR"].INDICADOR}}</div>
+    <div>Vigente desde {{ data["TIBR"].FECHA}}</div>
+    <a href="#" class="button" id="meta-button">Decisiones de política</a>
+  </div>
+
+  <div class="finance-ibr">
+    <h3 class="finance-ibr--descripcion">{{ data["IBR1"].DESCRIPCION|raw }}</h3>
+    <div>Tasa nominal</div>
+    <div class="finance-ibr--indicador">{{ data["IBR1"].INDICADOR}}</div>
+    <div>Vigente desde {{ data["IBR1"].FECHA}}</div>
+    <a href="#" class="button" id="meta-button">Otros plazos</a>
+  </div>
+
+  <div class="finance-trm">
+    <h3 class="finance-trm--descripcion">{{ data["TRM"].DESCRIPCION|raw }}</h3>
+    <div class="finance-trm--indicador">{{ data["TRM"].INDICADOR}}</div>
+    <div>Vigente desde {{ data["TRM"].FECHA}}</div>
+    <fieldset>
+    <legend>Calculadora</legend>
+    <input onChange="console.log({{ data["TRM"].INDICADOR}}*this.value)" type="number" name="cambio">
+    <input name="valorcalculado" id="valorcalculado" disabled type="text" value></div>
+    </fieldset>
+  </div>
+
+</section>
+{% endif %}
+
